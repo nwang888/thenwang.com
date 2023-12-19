@@ -1,6 +1,4 @@
-* {
-	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
 
 .home-bg {
 	height: 100vh;
@@ -118,31 +116,28 @@
 }
 
 @keyframes fallAway {
-	0% {
+	0%,
+	80% {
 		transform: translateY(0);
 		opacity: 1;
-	}
-	20% {
-		transform: translateY(0.5em);
-		opacity: 0;
-	}
-	71% {
-		transform: translateY(-0.5em);
 	}
 	100% {
-		transform: translateY(0);
-		opacity: 1;
+		transform: translateY(1em);
+		opacity: 0;
 	}
 }
 
 .animated-text {
+	position: relative;
+	top: -1px;
 	color: #f3f7f0;
 	font-family: "Courier New", monospace;
 	font-size: 1em;
-	line-height: 1.625;
+	/* line-height: 1.625; */
 	font-weight: 400;
 	display: inline-block;
-	animation: fallAway 5s infinite;
+	animation: fallAway 10.6s infinite;
+	vertical-align: top;
 }
 
 .home-links {

@@ -10,7 +10,7 @@ export default function Home() {
 		const intervalId = setInterval(() => {
 			index = index + 1 === verbs.length ? 0 : index + 1;
 			setVerb(verbs[index]);
-		}, 3000); // Change text every 3 seconds
+		}, 10000); // Change text every 10 seconds
 
 		return () => clearInterval(intervalId); // Clear interval on component unmount
 	}, []);
