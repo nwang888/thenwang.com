@@ -1,6 +1,12 @@
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
 
+// TODO: FIX ANIMATION TIMING
+// TODO: Make font size rescale with screen size
+// TODO: Make the action item clickable with email
+// TODO: Make hover effect on social media buttons
+// TODO: Add email and CV buttons to the bottom
+
 export default function Home() {
 	const [verb, setVerb] = useState("build");
 	useEffect(() => {
@@ -39,17 +45,29 @@ export default function Home() {
 							</div>
 							<ul className="home-links">
 								<li>
-									<a href="https://github.com/nwang888">
+									<a
+										href="https://github.com/nwang888"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
 										<img src="/GithubButton.svg" alt="Github" />
 									</a>
 								</li>
 								<li>
-									<a href="https://www.linkedin.com/in/nwang888/">
+									<a
+										href="https://www.linkedin.com/in/nwang888/"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
 										<img src="/LinkedinButton.svg" alt="LinkedIn" />
 									</a>
 								</li>
 								<li>
-									<a href="https://twitter.com/nwang888">
+									<a
+										href="https://twitter.com/nwang888"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
 										<img src="/TwitterButton.svg" alt="Twitter" />
 									</a>
 								</li>
