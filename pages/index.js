@@ -1,6 +1,20 @@
 import Head from "next/head";
+import React, { useState, useEffect } from "react";
 
 export default function Home() {
+	const [verb, setVerb] = useState("build");
+	useEffect(() => {
+		const verbs = ["imagine", "design", "build"];
+		let index = 0;
+
+		const intervalId = setInterval(() => {
+			index = index + 1 === verbs.length ? 0 : index + 1;
+			setVerb(verbs[index]);
+		}, 3000); // Change text every 3 seconds
+
+		return () => clearInterval(intervalId); // Clear interval on component unmount
+	}, []);
+
 	return (
 		<>
 			<div className="home-bg">
@@ -13,18 +27,31 @@ export default function Home() {
 							</div>
 							<hr className="home-hr" />
 							<p>
-								I’m currently a freshman at Duke University majoring in Computer
-								Science and Finance. I aim to find a way to the world where ESG,
-								computer science, behavioral science and policy come together to
-								identify and invest in technologies and policies that will
-								create lasting sustainable investments that better humanity.
+								I’m currently a junior at Duke University studying Computer
+								Science and Economics. I aim to find a way to the world where
+								individuals can self-identify and improve their own habits and
+								behaviors through novel and user-friendly development.
 							</p>
+							<div>
+								<p>
+									Let's <span className="animated-text">{verb}</span> together!
+								</p>
+							</div>
 							<ul className="home-links">
 								<li>
-									<a href="https://github.com/nwang888">Github</a>
+									<a href="https://github.com/nwang888">
+										<img src="/GithubButton.svg" alt="Github" />
+									</a>
 								</li>
 								<li>
-									<a href="https://github.com/nwang888">Github</a>
+									<a href="https://www.linkedin.com/in/nwang888/">
+										<img src="/LinkedinButton.svg" alt="LinkedIn" />
+									</a>
+								</li>
+								<li>
+									<a href="https://twitter.com/nwang888">
+										<img src="/TwitterButton.svg" alt="Twitter" />
+									</a>
 								</li>
 							</ul>
 						</div>

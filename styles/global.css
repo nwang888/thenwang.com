@@ -9,6 +9,7 @@
 	position: absolute;
 	left: 0;
 	top: 0;
+	background-color: #262626;
 }
 
 .home-outer {
@@ -78,7 +79,7 @@
 
 .home-nameplate .name {
 	text-transform: uppercase;
-	/* color: #ffffff; */
+	color: #f3f7f0;
 	font-family: "Oswald", sans-serif;
 	letter-spacing: 0.25rem;
 	width: calc(100% + 0.25rem);
@@ -90,7 +91,7 @@
 }
 
 .home-nameplate .title {
-	/* color: #ffffff; */
+	color: #f3f7f0;
 	font-family: "Courier New", monospace;
 	font-size: 1.25em;
 	line-height: 1.375;
@@ -109,11 +110,39 @@
 }
 
 .home-inner p {
-	/* color: #ffffff; */
+	color: #f3f7f0;
 	font-family: "Courier New", monospace;
 	font-size: 1em;
 	line-height: 1.625;
 	font-weight: 400;
+}
+
+@keyframes fallAway {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	20% {
+		transform: translateY(0.5em);
+		opacity: 0;
+	}
+	71% {
+		transform: translateY(-0.5em);
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.animated-text {
+	color: #f3f7f0;
+	font-family: "Courier New", monospace;
+	font-size: 1em;
+	line-height: 1.625;
+	font-weight: 400;
+	display: inline-block;
+	animation: fallAway 5s infinite;
 }
 
 .home-links {
@@ -125,6 +154,12 @@
 	letter-spacing: 0;
 	padding: 0;
 	list-style: none;
+}
+
+.home-links li a img {
+	height: 100%;
+	width: 100%;
+	transition: fill 0.25s ease;
 }
 
 .home-footer {
