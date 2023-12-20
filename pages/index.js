@@ -1,7 +1,8 @@
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
-// TODO: FIX ANIMATION TIMING
+// TODO: FIX ANIMATION TIMING - mostly fine unless js desyncs
 // TODO: Make font size rescale with screen size
 // TODO: Make the action item clickable with email
 // TODO: Make hover effect on social media buttons
@@ -45,22 +46,32 @@ export default function Home() {
 							</div>
 							<ul className="home-links">
 								<li>
-									<a
+									<motion.a
 										href="https://github.com/nwang888"
 										target="_blank"
 										rel="noopener noreferrer"
+										whileHover={{
+											scale: 1.1,
+											rotate: 360,
+											transition: { duration: 0.5 }
+										}}
 									>
 										<img src="/GithubButton.svg" alt="Github" />
-									</a>
+									</motion.a>
 								</li>
 								<li>
-									<a
+									<motion.a
 										href="https://www.linkedin.com/in/nwang888/"
 										target="_blank"
 										rel="noopener noreferrer"
+										whileHover={{
+											scale: 1.1,
+											rotate: 360,
+											transition: { duration: 0.5 }
+										}}
 									>
 										<img src="/LinkedinButton.svg" alt="LinkedIn" />
-									</a>
+									</motion.a>
 								</li>
 								<li>
 									<a
