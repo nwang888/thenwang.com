@@ -30,7 +30,7 @@ export default function Home() {
 						<div className="home-inner">
 							<div className="home-nameplate">
 								<div className="name">N Wang</div>
-								<div className="title">Reality Architect</div>
+								<div className="title">Strategist | Builder | Orchestrator</div>
 							</div>
 							<hr className="home-hr" />
 							<p>
@@ -45,45 +45,88 @@ export default function Home() {
 								</p>
 							</div>
 							<ul className="home-links">
-								<li>
-									<motion.a
-										href="https://github.com/nwang888"
-										target="_blank"
-										rel="noopener noreferrer"
-										whileHover={{
-											scale: 1.1,
-											rotate: 360,
-											transition: { duration: 0.5 }
-										}}
-									>
-										<img src="/GithubButton.svg" alt="Github" />
-									</motion.a>
-								</li>
-								<li>
-									<motion.a
-										href="https://www.linkedin.com/in/nwang888/"
-										target="_blank"
-										rel="noopener noreferrer"
-										whileHover={{
-											scale: 1.1,
-											rotate: 360,
-											transition: { duration: 0.5 }
-										}}
-									>
-										<img src="/LinkedinButton.svg" alt="LinkedIn" />
-									</motion.a>
-								</li>
-								<li>
-									<a
-										href="https://twitter.com/nwang888"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										<img src="/TwitterButton.svg" alt="Twitter" />
-									</a>
-								</li>
+								<motion.a
+									href="https://github.com/nwang888"
+									target="_blank"
+									rel="noopener noreferrer"
+									whileHover={{
+										scale: 1.3
+										// rotate: 360,
+									}}
+									transition={{ type: "spring", stiffness: 400, damping: 20 }}
+								>
+									<img src="/GithubButton.svg" alt="Github" />
+								</motion.a>
+								<motion.a
+									href="https://www.linkedin.com/in/nwang888/"
+									target="_blank"
+									rel="noopener noreferrer"
+									whileHover={{
+										scale: 1.3
+										// rotate: 360,
+									}}
+									transition={{ type: "spring", stiffness: 400, damping: 20 }}
+								>
+									<img src="/LinkedinButton.svg" alt="LinkedIn" />
+								</motion.a>
+								<motion.a
+									href="https://www.twitter.com/nwang888/"
+									target="_blank"
+									rel="noopener noreferrer"
+									whileHover={{
+										scale: 1.3
+										// rotate: 360,
+									}}
+									transition={{ type: "spring", stiffness: 400, damping: 20 }}
+								>
+									<img src="/TwitterButton.svg" alt="LinkedIn" />
+								</motion.a>
 							</ul>
 						</div>
+					</div>
+				</div>
+				<div className="menu-container">
+					<div className="menu">
+						<motion.a
+							href="#home"
+							whileHover={{ scale: 1.05 }}
+							transition={{
+								type: "spring",
+								duration: 0.3
+							}}
+						>
+							Home
+						</motion.a>
+
+						<motion.div
+							whileHover={{ scale: 1.05 }}
+							transition={{
+								type: "spring",
+								duration: 0.3
+							}}
+						>
+							<a href="#blog">Blog</a>
+						</motion.div>
+
+						<motion.div
+							whileHover={{ scale: 1.05 }}
+							transition={{
+								type: "spring",
+								duration: 0.3
+							}}
+						>
+							<a href="#projects">Projects</a>
+						</motion.div>
+
+						<motion.div
+							whileHover={{ scale: 1.05 }}
+							transition={{
+								type: "spring",
+								duration: 0.3
+							}}
+						>
+							<a href="#resume">Resume</a>
+						</motion.div>
 					</div>
 				</div>
 			</div>
