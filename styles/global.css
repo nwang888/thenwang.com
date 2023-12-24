@@ -184,15 +184,51 @@
 
 .project1-card {
 	width: 30vw;
-	height: 70vh;
+	height: 60vh;
 	border-radius: 15px;
 	background-color: #f3f7f0;
 	margin-left: 7vw; /* Adjust this to change the left padding */
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	background-image: url("/BetterMessages2.png"); /* Add your image here */
+	background-size: cover; /* Adjust the size of the image */
+	background-position: center; /* Adjust the position of the image */
 }
 
 .project1-desc {
-	/* Add your description styles here */
+	color: #f3f7f0;
+}
+
+.project1-title {
+	color: #f3f7f0;
+	font-family: "Oswald", sans-serif;
+	letter-spacing: 0.25rem;
+	width: calc(100% + 0.25rem);
+	font-size: 4vh;
+	line-height: 1.25;
+	font-weight: 700;
+	margin-bottom: var(--spacing);
+	margin-top: 0 !important;
+}
+
+.project1-hr {
+	margin-bottom: 0.5rem !important;
+	margin-top: 0.5rem !important;
+	position: relative;
+	width: 20%;
+	margin-left: 0;
+	margin-right: auto;
+}
+
+.project1-text {
+	font-family: "Courier New", monospace;
+	font-size: 1vw;
+	gap: 2vh;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: var(--flex-alignment);
+	letter-spacing: 0;
+	padding: 0;
+	list-style: none;
 }
 
 .menu-container {
