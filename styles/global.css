@@ -1,17 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
 
+.parent-container {
+	display: flex;
+	flex-direction: column;
+}
+
 .home-bg {
 	height: 100vh;
 	width: 100vw;
 	z-index: 1;
-	position: absolute;
-	left: 0;
-	top: 0;
-	/* background-color: #262626; */
+	background-color: #262626;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
 		url("/background3.jpg");
 	background-repeat: no-repeat;
-	background-size: 110%;
+	background-size: 150%;
 	background-position: center;
 }
 
@@ -24,7 +26,7 @@
 	overflow: hidden;
 	position: relative;
 	z-index: 2;
-	padding: 2.5vh 2.5vh 2.5vh 7.5vh;
+	margin: 2.5vh 2.5vh 2.5vh 5vw;
 }
 
 .home-outer {
@@ -165,6 +167,34 @@
 	transition: fill 0.25s ease;
 }
 
+.project1-bg {
+	height: 100vh;
+	width: 100vw;
+	z-index: 1;
+	position: relative;
+	background-color: #262626;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+	background-repeat: no-repeat;
+	background-size: 150%;
+	background-position: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.project1-card {
+	width: 30vw;
+	height: 70vh;
+	border-radius: 15px;
+	background-color: #f3f7f0;
+	margin-left: 7vw; /* Adjust this to change the left padding */
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project1-desc {
+	/* Add your description styles here */
+}
+
 .menu-container {
 	position: fixed;
 	right: 0;
@@ -176,7 +206,7 @@
 	font-family: "Oswald", sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 0.02rem;
-	font-size: 5vh;
+	font-size: 3.5vw;
 	font-weight: 500;
 	padding-right: 10vh;
 	color: #f3f7f0;
@@ -194,10 +224,20 @@
 	text-decoration: none;
 }
 
+.menu-item a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.menu-item a:hover {
+	color: #d70040; /* Change this to the color you want */
+}
+
 /* this line of code resets the bg so it actually fills the window */
 html,
 body {
 	margin: 0;
 	padding: 0;
 	min-height: 100vh;
+	background-color: #262626;
 }
