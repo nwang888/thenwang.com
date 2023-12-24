@@ -176,10 +176,22 @@
 	font-family: "Oswald", sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 0.02rem;
-	font-size: 3vh;
+	font-size: 5vh;
 	font-weight: 500;
-	padding-right: 5vh;
+	padding-right: 10vh;
 	color: #f3f7f0;
+	z-index: 3;
+}
+
+.menu-item {
+	margin: 0 0 0 5vh;
+	cursor: pointer;
+	transform-origin: left;
+}
+
+.menu-item a {
+	color: inherit;
+	text-decoration: none;
 }
 
 /* this line of code resets the bg so it actually fills the window */

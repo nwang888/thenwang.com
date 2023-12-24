@@ -87,45 +87,38 @@ export default function Home() {
 				</div>
 				<div className="menu-container">
 					<div className="menu">
-						<motion.a
-							href="#home"
-							whileHover={{ scale: 1.05 }}
-							transition={{
-								type: "spring",
-								duration: 0.3
-							}}
+						<motion.div
+							className="menu-item"
+							whileHover={{ scale: 1.5 }}
+							transition={{ stiffness: 400, damping: 20, duration: 0.3 }}
 						>
-							Home
-						</motion.a>
+							<a href="#home">Home</a>
+						</motion.div>
 
 						<motion.div
-							whileHover={{ scale: 1.05 }}
-							transition={{
-								type: "spring",
-								duration: 0.3
-							}}
+							className="menu-item"
+							whileHover={{ scale: 1.5 }}
+							transition={{ stiffness: 400, damping: 20, duration: 0.3 }}
 						>
 							<a href="#blog">Blog</a>
 						</motion.div>
 
 						<motion.div
-							whileHover={{ scale: 1.05 }}
-							transition={{
-								type: "spring",
-								duration: 0.3
-							}}
+							className="menu-item"
+							whileHover={{ scale: 1.3 }}
+							transition={{ stiffness: 400, damping: 20, duration: 0.3 }}
 						>
 							<a href="#projects">Projects</a>
 						</motion.div>
 
 						<motion.div
-							whileHover={{ scale: 1.05 }}
-							transition={{
-								type: "spring",
-								duration: 0.3
-							}}
+							className="menu-item"
+							whileHover={{ scale: 1.5 }}
+							transition={{ stiffness: 400, damping: 20, duration: 0.3 }}
 						>
-							<a href="#resume">Resume</a>
+							<a href="/N_Wang_Resume.pdf" target="_blank">
+								Resume
+							</a>
 						</motion.div>
 					</div>
 				</div>
