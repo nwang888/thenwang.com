@@ -20,7 +20,7 @@ export default function Home() {
 	useEffect(() => {
 		const handleScroll = () => {
 			const { height } = homeBgRef.current.getBoundingClientRect();
-			const scrollPos = window.scrollY / height;
+			const scrollPos = window.scrollY / (height * 0.75); // fades out at 75% of the way down the element
 			homeBgRef.current.style.opacity = Math.max(1 - scrollPos, 0);
 		};
 
