@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Home from "./components/home";
 import Projects from "./components/projects";
+import Footer from "./components/footer";
 
 // TODO: FIX ANIMATION TIMING - mostly fine unless js desyncs
 // TODO: Make font size rescale with screen size
@@ -10,11 +11,16 @@ import Projects from "./components/projects";
 // TODO: Add email and CV buttons to the bottom
 
 export default function Dash() {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	return (
 		<>
 			<div className="parentContainer">
 				<Home />
 				<Projects />
+				<Footer />
 			</div>
 		</>
 	);

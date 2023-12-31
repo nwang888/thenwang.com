@@ -1,17 +1,44 @@
 export default function Projects() {
 	return (
 		<>
-			<div className="project1-bg" id="projects">
-				<div className="project1-card"></div>
-				<div className="project1-desc">
-					<div className="project1-title">BetterMessages</div>
-					<hr className="project1-hr" />
-					<div className="project1-text">
-						<p>
-							BetterMessages is a Chrome extension that allows users to
-							automatically send messages to their friends and family members.
-							The extension is currently in development.
-						</p>
+			<div className="project-bg" id="projects">
+				<div className="project1-wrapper">
+					<div className="project1-card"></div>
+					<div className="project1-desc">
+						<div className="project1-title">BetterMessages</div>
+						<div className="project1-text">
+							<p>
+								An alternative iMessage client. macOS native and enables message
+								and user analytics along with other QoL improvements. Currently
+								in development.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div className="project2-wrapper">
+					<div className="project2-card"></div>
+					<div className="project2-desc">
+						<div className="project1-title">BetterMessages</div>
+						<div className="project1-text">
+							<p>
+								An alternative iMessage client. macOS native and enables message
+								and user analytics along with other QoL improvements. Currently
+								in development.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div className="project1-wrapper">
+					<div className="project1-card"></div>
+					<div className="project1-desc">
+						<div className="project1-title">BetterMessages</div>
+						<div className="project1-text">
+							<p>
+								An alternative iMessage client. macOS native and enables message
+								and user analytics along with other QoL improvements. Currently
+								in development.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>

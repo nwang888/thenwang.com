@@ -5,6 +5,7 @@ export default function NavBar() {
 	const [showIcons, setShowIcons] = useState(false);
 
 	useEffect(() => {
+		// shows icons when not on the home page
 		const handleScroll = () => {
 			const projectsSection = document.getElementById("projects");
 			setShowIcons(window.scrollY >= projectsSection.offsetTop);
