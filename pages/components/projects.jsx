@@ -16,10 +16,10 @@ export default function Projects() {
 					</div>
 				</div>
 				<div className="project2-wrapper">
-					<div className="project2-card"></div>
+					<div className="project1-card"></div>
 					<div className="project2-desc">
-						<div className="project1-title">BetterMessages</div>
-						<div className="project1-text">
+						<div className="project2-title">BetterMessages</div>
+						<div className="project2-text">
 							<p>
 								An alternative iMessage client. macOS native and enables message
 								and user analytics along with other QoL improvements. Currently
