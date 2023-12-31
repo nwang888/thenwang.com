@@ -4,16 +4,16 @@ import { motion } from "framer-motion";
 export default function NavBar() {
 	const [showIcons, setShowIcons] = useState(false);
 
-	useEffect(() => {
-		// shows icons when not on the home page
-		const handleScroll = () => {
-			const projectsSection = document.getElementById("projects");
-			setShowIcons(window.scrollY >= projectsSection.offsetTop);
-		};
+	// useEffect(() => {
+	// 	// shows icons when not on the home page
+	// 	const handleScroll = () => {
+	// 		const projectsSection = document.getElementById("projects");
+	// 		setShowIcons(window.scrollY >= projectsSection.offsetTop);
+	// 	};
 
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
-	}, []);
+	// 	window.addEventListener("scroll", handleScroll);
+	// 	return () => window.removeEventListener("scroll", handleScroll);
+	// }, []);
 
 	return (
 		<div className="menu-container">
