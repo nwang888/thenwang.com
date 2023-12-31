@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
-import React, { useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import NavBar from "./navbar";
 
 export default function Home() {
-	const [verb, setVerb] = useState("build");
+	const [verb, setVerb] = useState("imagine");
+	const homeBgRef = useRef(null);
 	useEffect(() => {
 		const verbs = ["imagine", "design", "build"];
 		let index = 0;
@@ -15,9 +16,22 @@ export default function Home() {
 
 		return () => clearInterval(intervalId); // Clear interval on component unmount
 	}, []);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const { height } = homeBgRef.current.getBoundingClientRect();
+			const scrollPos = window.scrollY / height;
+			homeBgRef.current.style.opacity = Math.max(1 - scrollPos, 0);
+		};
+
+		window.addEventListener("scroll", handleScroll);
+
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
+
 	return (
 		<>
-			<div className="home-bg">
+			<div className="home-bg" ref={homeBgRef}>
 				<div className="home-wrapper">
 					<div className="home-outer">
 						<div className="home-inner">
