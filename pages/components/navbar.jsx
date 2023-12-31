@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function NavBar() {
-	const [showIcons, setShowIcons] = useState(false);
+	// const [showIcons, setShowIcons] = useState(false);
 
 	// useEffect(() => {
 	// 	// shows icons when not on the home page
@@ -23,11 +23,7 @@ export default function NavBar() {
 					whileHover={{ scale: 1.5 }}
 					transition={{ stiffness: 400, damping: 20, duration: 0.3 }}
 				>
-					{showIcons ? (
-						<img src="/Navbar/Home2.svg" alt="Home" />
-					) : (
-						<a href="#home">Home</a>
-					)}
+					<a href="#home">Home</a>
 				</motion.div>
 
 				<motion.div
@@ -35,11 +31,7 @@ export default function NavBar() {
 					whileHover={{ scale: 1.5 }}
 					transition={{ stiffness: 400, damping: 20, duration: 0.3 }}
 				>
-					{showIcons ? (
-						<img src="/Navbar/Blog2.svg" alt="Blog" />
-					) : (
-						<a href="#blog">Blog</a>
-					)}
+					<a href="#blog">Blog</a>
 				</motion.div>
 
 				<motion.div
@@ -47,11 +39,14 @@ export default function NavBar() {
 					whileHover={{ scale: 1.3 }}
 					transition={{ stiffness: 400, damping: 20, duration: 0.3 }}
 				>
-					{showIcons ? (
-						<img src="/Navbar/Projects1.svg" alt="Projects" />
-					) : (
-						<a href="#projects">Projects</a>
-					)}
+					<a href="#projects">Projects</a>
+					{/* <button
+						onClick={() =>
+							projectsRef.current.scrollIntoView({ behavior: "smooth" })
+						}
+					>
+						Projects
+					</button> */}
 				</motion.div>
 
 				<motion.div
@@ -59,13 +54,9 @@ export default function NavBar() {
 					whileHover={{ scale: 1.5 }}
 					transition={{ stiffness: 400, damping: 20, duration: 0.3 }}
 				>
-					{showIcons ? (
-						<img src="/Navbar/Resume1.svg" alt="Resume" />
-					) : (
-						<a href="/N_Wang_Resume.pdf" target="_blank">
-							Resume
-						</a>
-					)}
+					<a href="/N_Wang_Resume.pdf" target="_blank">
+						Resume
+					</a>
 				</motion.div>
 			</div>
 		</div>
