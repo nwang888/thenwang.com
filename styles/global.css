@@ -11,9 +11,8 @@
 }
 
 .home-bg {
-	padding-top: 30px;
 	height: 100vh;
-	width: 50vw;
+	width: 100vw;
 	background-color: #262626;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
 		url("/background3.jpg");
@@ -171,6 +170,36 @@
 	transition: fill 0.25s ease;
 }
 
+.project1-tools {
+	font-size: 2vh;
+	gap: 3vh;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	letter-spacing: 0;
+	padding: 0;
+	list-style: none;
+	user-select: none;
+}
+
+.project1-actions {
+	/* font-size: 4vh; */
+	gap: 2vh;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	letter-spacing: 0;
+	padding: 0;
+	list-style: none;
+	user-select: none;
+}
+
+.project1-actions li a img {
+	height: 100%;
+	width: 100%;
+	transition: fill 0.25s ease;
+}
+
 .project-bg {
 	height: 100vh;
 	width: 100vw;
@@ -211,9 +240,15 @@
 	position: relative;
 }
 
+.project1-wrapper a {
+	display: block;
+	position: relative;
+	width: 60%;
+}
+
 .project1-card {
 	z-index: 1;
-	width: 60%;
+	width: 100%;
 	height: 45vh;
 	border-radius: 0px;
 	background-color: #f3f7f0;
@@ -221,8 +256,23 @@
 	background-image: url("/BetterMessages2.png"); /* Add your image here */
 	background-size: cover; /* Adjust the size of the image */
 	background-position: center; /* Adjust the position of the image */
-	max-width: 60%; /* Add this line */
+	max-width: 100%; /* Add this line */
 	position: relative;
+}
+
+.project1-card::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.6); /* Adjust color and opacity as needed */
+	transition: background 0.3s ease; /* Adjust timing as needed */
+}
+
+.project1-card:hover::before {
+	background: none;
 }
 
 .project1-desc {
@@ -379,7 +429,7 @@
 /* this line of code resets the bg so it actually fills the window html, */
 body {
 	width: 100%;
-	margin-top: 0px;
+	margin: 0px;
 	padding: 0;
 	min-height: 100vh;
 	background-color: #262626;
