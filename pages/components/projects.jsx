@@ -21,6 +21,8 @@ export default function Projects() {
 								Currently in development.
 							</p>
 						</div>
+						<div className="project1-tools"></div>
+						<div className="project1-actions"></div>
 					</div>
 				</div>
 				<div className="project2-wrapper">

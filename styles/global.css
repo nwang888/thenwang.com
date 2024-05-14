@@ -5,15 +5,22 @@
 	flex-direction: column;
 }
 
+#wrap {
+	margin: 0 auto;
+	padding: 0;
+}
+
 .home-bg {
+	padding-top: 30px;
 	height: 100vh;
-	width: 100vw;
+	width: 50vw;
 	background-color: #262626;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
 		url("/background3.jpg");
 	background-repeat: no-repeat;
-	background-size: 150%;
+	background-size: 200%;
 	background-position: center;
+	overflow: hidden;
 }
 
 .home-wrapper {
@@ -186,7 +193,7 @@
 .project-header {
 	color: #f3f7f0;
 	font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;
-	font-size: 3vh;
+	font-size: 4vh;
 	line-height: 1.375;
 	font-weight: 700;
 	margin-bottom: var(--spacing);
@@ -275,13 +282,13 @@
 	text-align: right;
 }
 
-.project1-hr {
-	margin-bottom: 0.5rem !important;
-	margin-top: 0.5rem !important;
+.project-hr {
 	position: relative;
-	width: 20%;
+	width: 50%;
 	margin-left: 0;
 	margin-right: auto;
+	display: flex;
+	align-self: center;
 }
 
 .project1-text {
@@ -369,10 +376,10 @@
 	margin-bottom: 0.5rem;
 }
 
-/* this line of code resets the bg so it actually fills the window */
-html,
+/* this line of code resets the bg so it actually fills the window html, */
 body {
-	margin: 0;
+	width: 100%;
+	margin-top: 0px;
 	padding: 0;
 	min-height: 100vh;
 	background-color: #262626;

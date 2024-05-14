@@ -17,11 +17,11 @@ export default function Dash() {
 
 	return (
 		<>
-			<div className="parentContainer">
-				<Home />
-				<Projects />
-				<Footer />
-			</div>
+			{/* <div className="parentContainer"> */}
+			<Home />
+			{/* <Projects />
+				<Footer /> */}
+			{/* </div> */}
 		</>
 	);
 }

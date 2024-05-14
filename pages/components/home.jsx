@@ -58,7 +58,7 @@ export default function Home() {
 									rel="noopener noreferrer"
 									whileHover={{
 										scale: 1.3
-										// rotate: 360,
+										// rotate: 20
 									}}
 									transition={{ type: "spring", stiffness: 400, damping: 20 }}
 								>
@@ -92,7 +92,7 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-				<NavBar />
+				{/* <NavBar /> */}
 			</div>
 		</>
 	);
