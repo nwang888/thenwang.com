@@ -10,10 +10,17 @@
 	padding: 0;
 }
 
+:root {
+	--color-bg: #0c0910; /* Night */
+	--color-highlights: #832232; /* Some sorta red */
+	--color-highlights-rgb: 108, 48, 50;
+	--color-text: #f3f7f0; /* Mint Cream */
+	/* Add more colors as needed */
+}
+
 .home-bg {
 	height: 100vh;
 	width: 100vw;
-	background-color: #262626;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
 		url("/background3.jpg");
 	background-repeat: no-repeat;
@@ -63,6 +70,7 @@
 	position: relative;
 	width: var(--width);
 	padding: var(--padding-vertical) var(--padding-horizontal);
+	padding-left: 7vh;
 }
 
 .home-nameplate {
@@ -86,7 +94,7 @@
 
 .home-nameplate .name {
 	text-transform: uppercase;
-	color: #f3f7f0;
+	color: var(--color-text);
 	font-family: "Oswald", sans-serif;
 	letter-spacing: 0.25rem;
 	width: calc(100% + 0.25rem);
@@ -98,7 +106,7 @@
 }
 
 .home-nameplate .title {
-	color: #f3f7f0;
+	color: var(--color-text);
 	font-family: "Courier New", monospace;
 	font-size: 3vh;
 	line-height: 1.375;
@@ -117,7 +125,7 @@
 }
 
 .home-inner p {
-	color: #f3f7f0;
+	color: var(--color-text);
 	font-family: "Courier New", monospace;
 	font-size: 2vh;
 	line-height: 1.625;
@@ -143,7 +151,7 @@
 
 .animated-text {
 	position: relative;
-	color: #f3f7f0;
+	color: var(--color-text);
 	font-family: "Courier New", monospace;
 	/* line-height: 1.625; */
 	font-weight: 400;
@@ -182,6 +190,18 @@
 	user-select: none;
 }
 
+.project2-tools {
+	font-size: 2vh;
+	gap: 3vh;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	letter-spacing: 0;
+	padding: 0;
+	list-style: none;
+	user-select: none;
+}
+
 .project1-actions {
 	/* font-size: 4vh; */
 	gap: 2vh;
@@ -200,11 +220,29 @@
 	transition: fill 0.25s ease;
 }
 
+.project2-actions {
+	/* font-size: 4vh; */
+	gap: 2vh;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	letter-spacing: 0;
+	padding: 0;
+	list-style: none;
+	user-select: none;
+}
+
+.project2-actions li a img {
+	height: 100%;
+	width: 100%;
+	transition: fill 0.25s ease;
+}
+
 .project-bg {
 	height: 100vh;
 	width: 100vw;
 	position: relative;
-	background-color: #262626;
+	background-color: var(--color-bg);
 	background-repeat: no-repeat;
 	display: flex;
 	justify-content: flex-start;
@@ -220,8 +258,9 @@
 }
 
 .project-header {
-	color: #f3f7f0;
+	color: var(--color-text);
 	font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;
+	/* font-family: "Oswald", sans-serif; */
 	font-size: 4vh;
 	line-height: 1.375;
 	font-weight: 700;
@@ -247,17 +286,15 @@
 }
 
 .project1-card {
+	/* Your existing styles, remove background-image, filter, and transition */
+	position: relative;
 	z-index: 1;
 	width: 100%;
 	height: 45vh;
-	border-radius: 0px;
-	background-color: #f3f7f0;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-	background-image: url("/BetterMessages2.png"); /* Add your image here */
-	background-size: cover; /* Adjust the size of the image */
-	background-position: center; /* Adjust the position of the image */
-	max-width: 100%; /* Add this line */
-	position: relative;
+	background-color: var(--color-text);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+	max-width: 100%;
+	border-radius: 10px;
 }
 
 .project1-card::before {
@@ -267,17 +304,152 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: rgba(0, 0, 0, 0.6); /* Adjust color and opacity as needed */
-	transition: background 0.3s ease; /* Adjust timing as needed */
+	background-image: url("/BetterMessages2.png"); /* Move your image here */
+	background-size: cover; /* Adjust the size of the image */
+	background-position: center; /* Adjust the position of the image */
+	filter: grayscale(80%); /* Move the filter here */
+	transition: filter 0.3s ease; /* Move the transition here */
+	z-index: -1; /* Ensure this is below the color overlay */
 }
 
 .project1-card:hover::before {
+	filter: none; /* Move this line here */
+}
+
+.project1-card::after {
+	/* Your existing styles */
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(
+		var(--color-highlights-rgb),
+		0.6
+	); /* Adjust color and opacity as needed */
+	transition: background 0.3s ease; /* Adjust timing as needed */
+	border-radius: 10px;
+}
+
+.project1-card:hover::after {
+	background: none;
+}
+
+/* .project1-card {
+	z-index: 1;
+	width: 100%;
+	height: 45vh;
+	background-color: var(--color-text);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+	background-image: url("/BetterMessages2.png");
+	background-size: cover;
+	background-position: center; 
+	max-width: 100%;
+	position: relative;
+	border-radius: 10px;
+	filter: grayscale(80%); 
+	transition: filter 0.3s ease; 
+}
+
+.project1-card:hover {
+	filter: none;
+}
+
+.project1-card::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(
+		var(--color-highlights-rgb),
+		0.6
+	);
+	transition: background 0.3s ease;
+	border-radius: 10px;
+}
+
+.project1-card:hover::before {
+	background: none;
+} */
+
+.project2-wrapper a {
+	display: block;
+	position: relative;
+	width: 60%;
+}
+
+.project2-card {
+	z-index: 1;
+	width: 100%;
+	height: 45vh;
+	background-color: var(--color-text);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+	background-image: url("/BetterMessages2.png"); /* Add your image here */
+	background-size: cover; /* Adjust the size of the image */
+	background-position: center; /* Adjust the position of the image */
+	max-width: 100%; /* Add this line */
+	position: relative;
+	border-radius: 10px;
+}
+
+.project2-card::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(
+		var(--color-highlights-rgb),
+		0.6
+	); /* Adjust color and opacity as needed */
+	transition: background 0.3s ease; /* Adjust timing as needed */
+	border-radius: 10px;
+}
+
+.project2-card:hover::before {
+	background: none;
+}
+
+.project3-card {
+	z-index: 1;
+	width: 100%;
+	height: 45vh;
+	background-color: var(--color-text);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+	background-image: url("/background.jpg"); /* Add your image here */
+	background-size: cover; /* Adjust the size of the image */
+	background-position: center; /* Adjust the position of the image */
+	max-width: 100%; /* Add this line */
+	position: relative;
+	border-radius: 10px;
+}
+
+.project3-card::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(
+		var(--color-highlights-rgb),
+		0.6
+	); /* Adjust color and opacity as needed */
+	transition: background 0.3s ease; /* Adjust timing as needed */
+	border-radius: 10px;
+}
+
+.project3-card:hover::before {
 	background: none;
 }
 
 .project1-desc {
 	z-index: 2;
-	color: #f3f7f0;
+	color: var(--color-text);
 	max-width: 60%;
 	position: absolute;
 	transform: translateY(-50%);
@@ -297,7 +469,7 @@
 
 .project2-desc {
 	z-index: 2;
-	color: #f3f7f0;
+	color: var(--color-text);
 	max-width: 60%;
 	position: absolute;
 	transform: translateY(-50%);
@@ -306,7 +478,7 @@
 }
 
 .project2-title {
-	color: #f3f7f0;
+	color: var(--color-text);
 	/* font-family: "Oswald", sans-serif; */
 	font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;
 	letter-spacing: 0.25rem;
@@ -320,7 +492,7 @@
 }
 
 .project1-title {
-	color: #f3f7f0;
+	color: var(--color-text);
 	font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;
 	letter-spacing: 0.25rem;
 	width: calc(100% + 0.25rem);
@@ -353,6 +525,8 @@
 	padding: 0;
 	list-style: none;
 	text-align: right;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
 }
 
 .project2-text {
@@ -383,7 +557,7 @@
 	font-size: 3.5vw;
 	font-weight: 500;
 	padding-right: 10vh;
-	color: #f3f7f0;
+	color: var(--color-text);
 	z-index: 3;
 }
 
@@ -432,5 +606,5 @@ body {
 	margin: 0px;
 	padding: 0;
 	min-height: 100vh;
-	background-color: #262626;
+	background-color: var(--color-bg);
 }

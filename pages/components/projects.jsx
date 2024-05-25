@@ -36,7 +36,7 @@ export default function Projects() {
 							</ul>
 						</div>
 						<div className="project1-actions">
-							<ul className="project1-actions">
+							<ul>
 								<motion.a
 									href="https://www.bettermessages.org/"
 									target="_blank"
@@ -54,23 +54,86 @@ export default function Projects() {
 					</div>
 				</div>
 				<div className="project2-wrapper">
-					<div className="project1-card"></div>
+					<a
+						href="https://www.bettermessages.org/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<div className="project2-card"></div>
+					</a>
 					<div className="project2-desc">
-						<div className="project2-title">WalletWatchers</div>
+						<div className="project2-title">BetterMessages</div>
 						<div className="project2-text">
 							<p>
-								A webapp that allows users to track their spending across all
-								bank accounts.
+								An alternative iMessage client with an analytics dashboard.
+								macOS native and enables message and user analytics along with
+								other QoL improvements. <br /> Currently on hold.
 							</p>
+						</div>
+						<div className="project2-tools">
+							<ul className="project2-tools">
+								<li>Swift</li>
+								<li>SwiftUI</li>
+								<li>SQLite</li>
+							</ul>
+						</div>
+						<div className="project2-actions">
+							<ul className="project2-actions">
+								<motion.a
+									href="https://www.bettermessages.org/"
+									target="_blank"
+									rel="noopener noreferrer"
+									whileHover={{
+										scale: 1.3
+										// rotate: 360,
+									}}
+									transition={{ type: "spring", stiffness: 400, damping: 20 }}
+								>
+									<img src="/external_link_circle.svg" alt="External Link" />
+								</motion.a>
+							</ul>
 						</div>
 					</div>
 				</div>
 				<div className="project1-wrapper">
-					<div className="project1-card"></div>
+					<a
+						href="https://www.bettermessages.org/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<div className="project3-card"></div>
+					</a>
 					<div className="project1-desc">
-						<div className="project1-title">HackDuke</div>
+						<div className="project1-title">BetterMessages</div>
 						<div className="project1-text">
-							<p>A 300 person hackathon hosted at Duke University.</p>
+							<p>
+								An alternative iMessage client with an analytics dashboard.
+								macOS native and enables message and user analytics along with
+								other QoL improvements. <br /> Currently on hold.
+							</p>
+						</div>
+						<div className="project1-tools">
+							<ul className="project1-tools">
+								<li>Swift</li>
+								<li>SwiftUI</li>
+								<li>SQLite</li>
+							</ul>
+						</div>
+						<div className="project1-actions">
+							<ul>
+								<motion.a
+									href="https://www.bettermessages.org/"
+									target="_blank"
+									rel="noopener noreferrer"
+									whileHover={{
+										scale: 1.3
+										// rotate: 360,
+									}}
+									transition={{ type: "spring", stiffness: 400, damping: 20 }}
+								>
+									<img src="/external_link_circle.svg" alt="External Link" />
+								</motion.a>
+							</ul>
 						</div>
 					</div>
 				</div>
